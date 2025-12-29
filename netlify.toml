@@ -1,0 +1,14 @@
+[build]
+  functions = "netlify/functions"
+  publish = "."
+
+# Redirect all routes to index.html (functions are automatically excluded)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
+
+[build.environment]
+  NODE_VERSION = "18"
+
